@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // routes and middlewares
-app.use(chatRoutes);
+app.use(chatRoutes); 
 
 const server = app.listen(PORT, () => {
     console.log(`server running on localhost:${PORT}`);
