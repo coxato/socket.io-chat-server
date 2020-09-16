@@ -1,6 +1,5 @@
 const express = require("express");
 const socketio = require("socket.io");
-const { use } = require("./routes/chatRoutes");
 // routes 
 const chatRoutes = require("./routes/chatRoutes");
 // users
