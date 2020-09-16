@@ -1,6 +1,6 @@
 {
-    "name": "socketio-chat-server",
-    "alias": "socketio-chat-server",
+    "name": "socket-io-chat-server",
+    "alias": "socket-io-chat-server",
     "version": 2,
     "env": {
       "PORT": "3000"
