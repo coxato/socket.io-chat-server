@@ -14,22 +14,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(chatRoutes); 
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
- // Add this
- if (req.method === 'OPTIONS') {
-
-      res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, OPTIONS');
-      res.header('Access-Control-Max-Age', 120);
-      return res.status(200).json({});
-  }
-
-  next();
-
-});
-
 const server = app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
 });
