@@ -17,7 +17,7 @@ app.use(chatRoutes);
 const server = app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
 });
-
+ 
 // socket.io
 const io = socketio(server);
 
