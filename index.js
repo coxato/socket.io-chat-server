@@ -64,6 +64,7 @@ const cors = require('cors');
 const { addUser, removeUser, getUser } = require('./services/users');
 
 const chatRoutes = require('./routes/chatRoutes');
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 const server = http.createServer(app);
@@ -106,7 +107,7 @@ io.on('connect', (socket) => {
   })
 });
 
-server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
+server.listen(PORT, () => console.log(`Server has started in port ${PORT}.`));
 
 
  
