@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const socketio = require("socket.io");
 const cors = require("cors");
@@ -12,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 
 // routes and middlewares
 app.use(cors());
-app.use(chatRoutes); 
+app.use(chatRoutes);
+app.use(express.static(path.join(__dirname, 'static')));
 
 const server = app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
